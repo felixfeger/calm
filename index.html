@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calm — Felix Feger</title>
+<meta name="description" content="Guided breathing, grounding, and body-scan exercises to help you slow down and reset.">
+<link rel="stylesheet" href="https://felixfeger.com/css/style.css">
+<link rel="stylesheet" href="css/calm.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="https://felixfeger.com/" class="brand"><img src="https://felixfeger.com/logo.png" alt="Office of Felix Feger" class="brand-logo"></a>
+    <nav class="nav-desktop" aria-label="Primary">
+      <a href="https://felixfeger.com/">Welcome</a>
+      <a href="https://felixfeger.com/travel.html">Travel</a>
+      <a href="https://felixfeger.com/socials.html">Socials</a>
+      <a href="https://felixfeger.com/city-metro.html">City Metro</a>
+      <a href="https://flights.felixfeger.com">Flights</a>
+      <a href="https://blog.felixfeger.com">Blog</a>
+      <a href="/" aria-current="page">Calm</a>
+      <a href="https://felixfeger.com/contact.html">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+  <nav class="nav-mobile" aria-label="Mobile">
+    <a href="https://felixfeger.com/">Welcome</a>
+    <a href="https://felixfeger.com/travel.html">Travel</a>
+    <a href="https://felixfeger.com/socials.html">Socials</a>
+    <a href="https://felixfeger.com/city-metro.html">City Metro</a>
+    <a href="https://flights.felixfeger.com">Flights</a>
+    <a href="https://blog.felixfeger.com">Blog</a>
+    <a href="/">Calm</a>
+    <a href="https://felixfeger.com/contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="eyebrow">Take a moment</div>
+      <h1>Calm</h1>
+      <p>A few simple, guided ways to slow down and reset. Pick one, get comfortable, and go at your own pace.</p>
+      <div class="chip-row">
+        <a class="chip" href="#breathing">Breathing</a>
+        <a class="chip" href="#grounding">Grounding</a>
+        <a class="chip" href="#bodyscan">Body scan</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Breathing -->
+  <section id="breathing">
+    <div class="wrap">
+      <h2>Guided breathing</h2>
+      <p class="sub">Follow the circle. Breathe in as it grows, out as it shrinks.</p>
+
+      <div class="pattern-row" role="group" aria-label="Breathing pattern">
+        <button class="pattern active" data-pattern="box">Box<small>4 · 4 · 4 · 4</small></button>
+        <button class="pattern" data-pattern="478">4-7-8<small>4 · 7 · 8</small></button>
+        <button class="pattern" data-pattern="even">Even<small>5 · 5</small></button>
+        <button class="pattern" data-pattern="long">Long exhale<small>4 · 6</small></button>
+      </div>
+      <p class="pattern-desc" id="pattern-desc"></p>
+
+      <div class="breath-stage">
+        <div class="breath-ring">
+          <div class="breath-circle" id="breath-circle"></div>
+          <div class="breath-text">
+            <div class="breath-label" id="breath-label">Ready</div>
+            <div class="breath-count" id="breath-count"></div>
+          </div>
+        </div>
+        <div class="breath-meta" id="breath-meta">Cycles: 0</div>
+        <button class="btn btn-teal" id="breath-btn">Begin</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grounding -->
+  <section id="grounding">
+    <div class="wrap">
+      <h2>5-4-3-2-1 grounding</h2>
+      <p class="sub">Brings you back to the present by using your senses. Take your time with each step.</p>
+      <div class="guide" id="guide-grounding">
+        <div class="guide-count"></div>
+        <h3 class="guide-title"></h3>
+        <p class="guide-text"></p>
+        <div class="guide-bar"><span></span></div>
+        <div class="guide-actions">
+          <button class="btn btn-teal" data-act="prev">Back</button>
+          <button class="btn" data-act="next">Next</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Body scan -->
+  <section id="bodyscan">
+    <div class="wrap">
+      <h2>Quick body scan</h2>
+      <p class="sub">About two minutes. Press start and the guide moves on by itself every 15 seconds.</p>
+      <div class="guide" id="guide-scan">
+        <div class="guide-count"></div>
+        <h3 class="guide-title"></h3>
+        <p class="guide-text"></p>
+        <div class="guide-bar"><span></span></div>
+        <div class="guide-actions">
+          <button class="btn btn-teal" data-act="prev">Back</button>
+          <button class="btn" data-act="play">Start</button>
+          <button class="btn btn-teal" data-act="next">Skip</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">Copyright 2026 by Felix Feger.</div>
+</footer>
+
+<script src="js/menu.js"></script>
+<script src="js/calm.js"></script>
+</body>
+</html>
