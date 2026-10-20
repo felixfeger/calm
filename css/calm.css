@@ -1,0 +1,80 @@
+/* Calm page — uses the tokens from style.css */
+
+.sub { color: var(--ink-soft); margin-bottom: 28px; }
+
+.chip-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.chip {
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+  border-radius: 999px;
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--teal-deep);
+}
+.chip:hover { background: var(--teal-deep); color: #fff; text-decoration: none; }
+
+/* pattern picker */
+.pattern-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 14px; }
+@media (max-width: 720px) { .pattern-row { grid-template-columns: repeat(2, 1fr); } }
+.pattern {
+  border: 1px solid var(--line);
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 12px 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ink);
+  cursor: pointer;
+}
+.pattern small { display: block; font-family: var(--font-body); font-weight: 400; color: var(--ink-soft); font-size: 0.78rem; margin-top: 2px; }
+.pattern:hover { background: var(--bg-raised); }
+.pattern.active { border-color: var(--teal); background: var(--bg-raised); box-shadow: inset 0 -3px 0 var(--teal); }
+.pattern-desc { color: var(--ink-soft); font-size: 0.92rem; min-height: 3em; }
+
+/* breathing circle */
+.breath-stage { display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 24px 0 8px; }
+.breath-ring {
+  position: relative;
+  width: min(300px, 80vw);
+  aspect-ratio: 1;
+  border: 1.5px dashed var(--line);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.breath-circle {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #5E8C8C, var(--teal));
+  opacity: 0.85;
+  transform: scale(0.55);
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+}
+.breath-text { position: relative; text-align: center; color: #fff; }
+.breath-label { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; }
+.breath-count { font-size: 1.1rem; min-height: 1.4em; }
+.breath-meta { color: var(--ink-soft); font-size: 0.9rem; }
+
+/* step guides */
+.guide {
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+  padding: 28px 26px;
+  max-width: 620px;
+}
+.guide-count { color: var(--teal-deep); font-weight: 600; font-size: 0.85rem; margin-bottom: 6px; }
+.guide-title { font-size: 1.5rem; }
+.guide-text { color: var(--ink-soft); min-height: 4.8em; }
+.guide-bar { height: 4px; background: var(--line); margin: 14px 0 22px; border-radius: 2px; overflow: hidden; }
+.guide-bar span { display: block; height: 100%; width: 0; background: var(--teal); transition: width 0.3s linear; }
+.guide-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+
+@media (prefers-reduced-motion: reduce) {
+  .breath-circle { transition: none !important; }
+  .guide-bar span { transition: none; }
+}
